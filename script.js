@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const heroText = document.querySelector(".hero-text");
   const aboutButton = document.querySelector("#aboutbutton");
   const projectButton = document.querySelector("#projectsbutton");
-  const cards = document.querySelectorAll('.card');
+  const cards = document.querySelectorAll('.skill-card');
 
   const handleAboutButton = (entry) => {
       if(entry[0].isIntersecting){

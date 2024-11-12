@@ -145,6 +145,8 @@ section {
   }
   
   .skill-card {
+    opacity: 0;
+    transform: translateX(-250%);
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -177,13 +179,20 @@ section {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 350px;
   width: 100%;
+  opacity: 0; /* Initially hidden */
+  transform: translateX(-100px); /* Initially off-screen */
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out; /* Smooth transition for visibility */
+}
+
+.skill-card.visible {
+  opacity: 1;
+  transform: translateX(0); /* Move into the normal position */
 }
 
 .skill-card p {
   font-size: 1rem;
   color: #777;
 }
-
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
